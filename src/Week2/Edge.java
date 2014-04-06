@@ -1,6 +1,6 @@
 package Week2;
-//@author Nikhil Khanna
 
+//@author Nikhil Khanna
 public class Edge implements Comparable<Edge>
 {
 	private int v;
@@ -31,5 +31,10 @@ public class Edge implements Comparable<Edge>
 			return 1;
 		else
 			return 0;
+	}
+	
+	public String toString()
+	{
+		return String.format("%d -> %d", v, w);
 	}
 }

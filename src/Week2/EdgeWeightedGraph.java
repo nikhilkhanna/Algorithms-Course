@@ -24,6 +24,11 @@ public class EdgeWeightedGraph {
 		adj[w].add(e);
 	}
 	
+	public int V()
+	{
+		return V;
+	}
+	
 	public Iterable<Edge> adj(int v)
 	{
 		return adj[v];
