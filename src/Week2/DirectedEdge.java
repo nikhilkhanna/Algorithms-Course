@@ -5,10 +5,10 @@ public class DirectedEdge {
 	private final int w;
 	private final double weight;
 	
-	public DirectedEdge(int v, int w, double weight)
+	public DirectedEdge(int from, int to, double weight)
 	{
-		this.v = v;
-		this.w = w;
+		this.v = from;
+		this.w = to;
 		this.weight = weight;
 	}
 	
@@ -25,6 +25,11 @@ public class DirectedEdge {
 	public double weight()
 	{
 		return weight;
+	}
+	
+	public String toString()
+	{
+		return String.format("%d -> %d", v, w);
 	}
 }
 
