@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+import sorting.Mergesort;
+
 import Week2.DijkstraSP;
 import Week2.DirectedEdge;
 import Week2.Edge;
@@ -17,19 +19,9 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		EdgeWeightedDigraph g = new EdgeWeightedDigraph(5);
-		g.addEdge(new DirectedEdge(0,1,5.0));
-		g.addEdge(new DirectedEdge(0, 2, 1.0));
-		g.addEdge(new DirectedEdge(2, 1, 2.0));
-		g.addEdge(new DirectedEdge(1, 4, .5));
-		g.addEdge(new DirectedEdge(2, 3, 5.0));
-		g.addEdge(new DirectedEdge(4,3,1.0));
-		g.addEdge(new DirectedEdge(3,0,2.0));
-		DijkstraSP sp = new DijkstraSP(g, 0);
-		for(DirectedEdge e : sp.edgeTo())
-		{
-			System.out.println(e);
-		}
+		Integer[] myNums = {3,6,7,2,6,7,3,63,634,61234,61423,5,0,12,-5,6,21,6789234};
+		Mergesort.sort(myNums);
+		for(Integer i : myNums)
+			System.out.printf("%d ",i.intValue());
 	}
 }
