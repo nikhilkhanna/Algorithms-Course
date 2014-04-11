@@ -23,11 +23,9 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		char[] myChars = {'a','d','b','z','w','m','u','k','d'};
-		RadixSort.alphabetSorter(myChars);
-		for(char c : myChars)
-		{
-			System.out.print(c+" ");
-		}
+		String[] myString = {"hellod", "eleven", "popper", "picked", "summer", "pickle", "pourin", "alphab"};
+		RadixSort.LSDSort(myString, 6);
+		for(String s : myString)
+			System.out.print(s+" ");
 	}
 }
