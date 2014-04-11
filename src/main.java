@@ -1,6 +1,10 @@
 import java.util.Arrays;
+import java.util.Random;
 
+import sorting.ElementarySorts;
 import sorting.Mergesort;
+import sorting.Quicksort;
+import sorting.RadixSort;
 
 import Week2.DijkstraSP;
 import Week2.DirectedEdge;
@@ -19,9 +23,11 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Integer[] myNums = {3,6,7,2,6,7,3,63,634,61234,61423,5,0,12,-5,6,21,6789234};
-		Mergesort.sort(myNums);
-		for(Integer i : myNums)
-			System.out.printf("%d ",i.intValue());
+		char[] myChars = {'a','d','b','z','w','m','u','k','d'};
+		RadixSort.alphabetSorter(myChars);
+		for(char c : myChars)
+		{
+			System.out.print(c+" ");
+		}
 	}
 }
