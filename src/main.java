@@ -23,8 +23,8 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String[] myString = {"hellod", "eleven", "popper", "picked", "summer", "pickle", "pourin", "alphab"};
-		RadixSort.LSDSort(myString, 6);
+		String[] myString = {"hello", "eleven", "po", "pked", "summer", "kle", "pourin", "alphab"};
+		RadixSort.MSDSort(myString);
 		for(String s : myString)
 			System.out.print(s+" ");
 	}

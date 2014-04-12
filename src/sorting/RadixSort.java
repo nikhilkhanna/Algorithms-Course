@@ -4,6 +4,48 @@ public class RadixSort
 {
 	public static final int R = 256;
 	
+	
+	
+	public static void MSDSort(String[] a)
+	{
+		String[] aux = new String[a.length];
+		MSDSort(a, aux, 0, a.length-1,0);
+	}
+	
+	private static void MSDSort(String[] a, String[] aux, int lo, int hi, int d)
+	{
+		//returns if single word in subsection to be sorted
+		if(hi<=lo)	return;
+		int count[] = new int[R+2];
+		for(int i = lo; i <= hi; i++)
+		{
+			count[charAt(a[i], d)+2]++;
+		}
+		for(int r = 0; r < R+1; r++)
+		{
+			count[r+1] += count[r];
+		}
+		for(int i = lo; i<= hi; i++)
+		{
+			aux[count[charAt(a[i], d)+1]++] = a[i];
+		}
+		for(int i = lo; i<= hi; i++)
+		{
+			a[i] = aux[i-lo];
+		}
+		
+		for(int r = 0; r<R;r++)
+		{
+			MSDSort(a, aux, lo+count[r],lo+count[r+1]-1, d+1);
+		}
+		
+	}
+	
+	private static int charAt(String s, int d)
+	{
+		if(d<s.length()) return s.charAt(d);
+		else return -1;
+	}
 	/** Sorts an array of same size strings via LSD
 	 * @param a		array of strings  to be sorted
 	 * @param W 	chars in each string
