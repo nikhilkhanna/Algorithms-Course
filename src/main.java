@@ -6,6 +6,7 @@ import sorting.Mergesort;
 import sorting.Quicksort;
 import sorting.RadixSort;
 
+import Tries.TST;
 import Tries.TrieST;
 import Week2.DijkstraSP;
 import Week2.DirectedEdge;
@@ -24,9 +25,9 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		TrieST<Integer> myT = new TrieST<Integer>();
-		myT.put("test", 1);
-		myT.put("testes", 3);
-		myT.put("tests", 5);
+		TST<Integer> myTrie = new TST<Integer>();
+		myTrie.put("hi", 1);
+		myTrie.put("bye", 5);
+		System.out.println(myTrie.get("bye"));
 	}
 }
