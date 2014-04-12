@@ -6,6 +6,7 @@ import sorting.Mergesort;
 import sorting.Quicksort;
 import sorting.RadixSort;
 
+import Tries.TrieST;
 import Week2.DijkstraSP;
 import Week2.DirectedEdge;
 import Week2.Edge;
@@ -23,9 +24,9 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		String[] myString = {"hello", "eleven", "po", "pked", "summer", "kle", "pourin", "alphab"};
-		RadixSort.MSDSort(myString);
-		for(String s : myString)
-			System.out.print(s+" ");
+		TrieST<Integer> myT = new TrieST<Integer>();
+		myT.put("test", 1);
+		myT.put("testes", 3);
+		myT.put("tests", 5);
 	}
 }
