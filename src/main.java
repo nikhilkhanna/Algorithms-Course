@@ -18,6 +18,7 @@ import Week2.LazyPrimMST;
 import Graphs.BreadthFirstPaths;
 import Graphs.CC;
 import Graphs.Graph;
+import Misc.MaxPQ;
 //@author Nikhil Khanna
 //Client for testing classes
 public class main {
@@ -25,9 +26,13 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		TST<Integer> myTrie = new TST<Integer>();
-		myTrie.put("hi", 1);
-		myTrie.put("bye", 5);
-		System.out.println(myTrie.get("bye"));
+		MaxPQ<Integer> pq = new MaxPQ<Integer>(5);
+		pq.insert(5);
+		pq.insert(3);
+		pq.insert(2);
+		pq.insert(7);
+		pq.insert(1);
+		while(!pq.isEmpty())
+			System.out.println(pq.delMax());
 	}
 }
