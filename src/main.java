@@ -8,16 +8,16 @@ import sorting.RadixSort;
 
 import Tries.TST;
 import Tries.TrieST;
-import Week2.DijkstraSP;
-import Week2.DirectedEdge;
-import Week2.Edge;
-import Week2.EdgeWeightedDigraph;
-import Week2.EdgeWeightedGraph;
-import Week2.LazyPrimMST;
 
 import Graphs.BreadthFirstPaths;
 import Graphs.CC;
 import Graphs.Graph;
+import MST_And_Shortest_Path.DijkstraSP;
+import MST_And_Shortest_Path.DirectedEdge;
+import MST_And_Shortest_Path.Edge;
+import MST_And_Shortest_Path.EdgeWeightedDigraph;
+import MST_And_Shortest_Path.EdgeWeightedGraph;
+import MST_And_Shortest_Path.LazyPrimMST;
 import Misc.MaxPQ;
 //@author Nikhil Khanna
 //Client for testing classes
