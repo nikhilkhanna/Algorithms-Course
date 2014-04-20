@@ -20,6 +20,7 @@ import MST_And_Shortest_Path.EdgeWeightedGraph;
 import MST_And_Shortest_Path.LazyPrimMST;
 import Misc.BST;
 import Misc.MaxPQ;
+import Misc.SeperateChainingHashST;
 //@author Nikhil Khanna
 //Client for testing classes
 public class main {
@@ -27,16 +28,14 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		BST<Integer, String> binaryTree = new BST<Integer, String>();
-		binaryTree.put(5, "hello");
-		binaryTree.put(1, "bye");
-		binaryTree.put(7, "end");
-		binaryTree.put(0, "goodbye");
-		binaryTree.delete(0);
-		System.out.println(binaryTree.size());
-		for(Integer i : binaryTree.keys())
+		SeperateChainingHashST<Integer, String> st = new SeperateChainingHashST<>(4);
+		for(int i = 0; i < 20; i++)
 		{
-			System.out.println(i);
+			st.put(i, "hello"+i);
+		}
+		for(int i = 0; i < 20; i++)
+		{
+			System.out.println(st.get(i));
 		}
 	}
 }
